@@ -1,3 +1,4 @@
+import football_leagues_interface as football
 import json
 
 english_teams = "english_clubs.json"
