@@ -11,7 +11,7 @@ def pravljenje_dobijenih_rezultata_dict(dict_tabele):
     for data in dict_tabele:
         recnik_rezultata_tima = {"position": pozicija, "team": data[8], "matches": {"played": data[0],
                                  "won": data[1], "draw": data[2], "lose": data[3]}, "scores": {"for":
-                                 data[4], "against": data[5], "goal difference": data[6]}, "points": data[8]
+                                 data[4], "against": data[5], "goal difference": data[6]}, "points": data[7]
                                  }
         tabela_timova_i_njihovih_rezultata.append(recnik_rezultata_tima)
         pozicija += 1
@@ -19,3 +19,5 @@ def pravljenje_dobijenih_rezultata_dict(dict_tabele):
 
 
 
+# english_teams = "english_clubs.json"
+# english_matches = "english_matches.json"

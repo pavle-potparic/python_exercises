@@ -20,14 +20,14 @@
 #   },
 #  "points": 100
 # }
-# ]
+
 
 
 import football_leagues_interface as football
 import json
 
-english_teams = "english_clubs.json"
-english_matches = "english_matches.json"
+english_teams = "spain_clubs_2018.json"
+english_matches = "spain_matches_2018.json"
 
 
 # with open(english_teams, "r", encoding="utf-8") as stream_clubs, open(english_matches) as stream_matches:
@@ -186,8 +186,8 @@ def pravljenje_dobijenih_rezultata_dict(dict_tabele):
 engleska_liga = football.pravljenje_dobijenih_rezultata_dict(tabela)
 print(engleska_liga)
 
-english_league = 'english_final_table_2018.json'
-with open(english_league, 'w') as file:
+spain_league = 'spain_final_table_2018.json'
+with open(spain_league, 'w') as file:
     json.dump(engleska_liga, file)
 
 

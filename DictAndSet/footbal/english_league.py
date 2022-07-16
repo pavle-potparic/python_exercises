@@ -135,7 +135,7 @@ def pravljenje_tabele(dict_timova_i_njihovih_rezultata):
     return lista_timova_i_njihovih_rezultata
 
 
-data_teams = get_data(english_teams)
+data_teams = football.get_data(english_teams)
 all_clubs = get_from_dict_by_key(data_teams, "clubs")
 team_names = get_name_of_teams(all_clubs, 'name')
 prepare_teams_dict = prepare_teams_score_dict(team_names)
@@ -147,21 +147,10 @@ list_of_matches = get_list_of_matches(match_rounds)
 timovi_i_nihovi_rezultati = get_points_of_one_team(list_of_matches, prepare_teams_dict)
 tabela = pravljenje_tabele(timovi_i_nihovi_rezultati)
 
-
-def odstampaj_tabelu(lista_rezultata):
-    text = ["Position", "Team", "Played", "Won", "Draw", "Lose", "For", "Against", "GD", "Points"]
-    print(text[0].ljust(12, " "), text[1].ljust(22, " "), text[2].ljust(8, " "), text[3].ljust(5, " "),
-          text[4].ljust(8, " "), text[5].ljust(8, " "), text[6].ljust(6, " "), text[7].ljust(8, " "),
-          text[8].ljust(5, " "), text[9].ljust(5, " "))
-    for index in range(0, len(lista_rezultata)):
-        print(
-            str(index + 1).ljust(12, " ") + str(lista_rezultata[index][8]).ljust(25, " ") + str(
-                lista_rezultata[index][0]).ljust(8, " ") +
-            str(lista_rezultata[index][1]).ljust(8, " ") + str(lista_rezultata[index][2]).ljust(8, " ") + str(
-                lista_rezultata[index][3]).ljust(8, " ") +
-            str(lista_rezultata[index][4]).ljust(8, " ") + str(lista_rezultata[index][5]).ljust(8, " ") + str(
-                lista_rezultata[index][6]).ljust(8, " ") +
-            str(lista_rezultata[index][7]).ljust(8, " "))
+english_league = football.pravljenje_dobijenih_rezultata_dict(tabela)
+print(english_league)
 
 
-odstampaj_tabelu(tabela)
+english_league = 'english_final_table_2018.json'
+with open(english_league, 'w') as file:
+    json.dump(english_league, file)
