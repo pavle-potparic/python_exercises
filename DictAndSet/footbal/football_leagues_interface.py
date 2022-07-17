@@ -65,7 +65,7 @@ def get_list_of_matches(match_list):
     return list_of_matches
 
 
-def get_points_of_one_team(list_of_matches, list_of_results):
+def get_points_of_one_team(list_of_matches, list_of_results, team_names):
     # matchday = list_of_matches[0]
 
     for team in team_names:
@@ -158,7 +158,7 @@ def pravljenje_dobijenih_rezultata_dict(dict_tabele):
                                                                                                                  "goal difference":
                                                                                                                      data[
                                                                                                                          6]},
-                                 "points": data[8]
+                                 "points": data[7]
                                  }
         tabela_timova_i_njihovih_rezultata.append(recnik_rezultata_tima)
         pozicija += 1

@@ -26,8 +26,8 @@
 import football_leagues_interface as football
 import json
 
-english_teams = "spain_clubs_2018.json"
-english_matches = "spain_matches_2018.json"
+spanish_teams = "spain_clubs_2018.json"
+spanish_matches = "spain_matches_2018.json"
 
 
 # with open(english_teams, "r", encoding="utf-8") as stream_clubs, open(english_matches) as stream_matches:
@@ -157,16 +157,16 @@ def pravljenje_tabele(dict_timova_i_njihovih_rezultata):
     return lista_timova_i_njihovih_rezultata
 
 
-data_teams = football.get_data(english_teams)
+data_teams = football.get_data(spanish_teams)
 all_clubs = football.get_from_dict_by_key(data_teams, "clubs")
 team_names = football.get_name_of_teams(all_clubs, 'name')
 prepare_teams_dict = football.prepare_teams_score_dict(team_names)
 
-data_matches = football.get_data(english_matches)
+data_matches = football.get_data(spanish_matches)
 match_rounds = football.get_from_dict_by_key(data_matches, "rounds")
 list_of_matches = football.get_list_of_matches(match_rounds)
 
-timovi_i_nihovi_rezultati = football.get_points_of_one_team(list_of_matches, prepare_teams_dict)
+timovi_i_nihovi_rezultati = football.get_points_of_one_team(list_of_matches, prepare_teams_dict, team_names)
 tabela = football.pravljenje_tabele(timovi_i_nihovi_rezultati)
 
 
