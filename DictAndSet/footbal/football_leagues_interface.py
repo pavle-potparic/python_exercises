@@ -164,5 +164,35 @@ def pravljenje_dobijenih_rezultata_dict(dict_tabele):
         pozicija += 1
     return tabela_timova_i_njihovih_rezultata
 
-# english_teams = "english_clubs.json"
-# english_matches = "english_matches.json"
+
+def write_to_file(file_to_write: str, final_table: list) -> None:
+    """
+    Write final table of football league sorted by position in json format.
+
+    :param file_to_write: Name of file to write final table in
+    :param final_table: List of final table with all data sorted by position (mathces, scores, position). List contains nested dictionary with data.
+    :return: None
+    """
+
+    with open(file_to_write, 'w') as file:
+        json.dump(final_table, file)
+
+
+def write_final_table(teams, matches, file):
+    data_teams = get_data(teams)
+    all_clubs = get_from_dict_by_key(data_teams, "clubs")
+    team_names = get_name_of_teams(all_clubs, 'name')
+    prepare_teams_dict = prepare_teams_score_dict(team_names)
+
+    data_matches = get_data(matches)
+    match_rounds = get_from_dict_by_key(data_matches, "rounds")
+    list_of_matches = get_list_of_matches(match_rounds)
+
+    timovi_i_nihovi_rezultati = get_points_of_one_team(list_of_matches, prepare_teams_dict, team_names)
+    tabela = pravljenje_tabele(timovi_i_nihovi_rezultati)
+
+
+    table_of_league = pravljenje_dobijenih_rezultata_dict(tabela)
+    print(table_of_league)
+
+    write_to_file(file, table_of_league)
