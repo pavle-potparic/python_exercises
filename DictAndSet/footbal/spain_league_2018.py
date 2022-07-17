@@ -158,16 +158,16 @@ def pravljenje_tabele(dict_timova_i_njihovih_rezultata):
 
 
 data_teams = football.get_data(english_teams)
-all_clubs = get_from_dict_by_key(data_teams, "clubs")
-team_names = get_name_of_teams(all_clubs, 'name')
-prepare_teams_dict = prepare_teams_score_dict(team_names)
+all_clubs = football.get_from_dict_by_key(data_teams, "clubs")
+team_names = football.get_name_of_teams(all_clubs, 'name')
+prepare_teams_dict = football.prepare_teams_score_dict(team_names)
 
 data_matches = football.get_data(english_matches)
-match_rounds = get_from_dict_by_key(data_matches, "rounds")
-list_of_matches = get_list_of_matches(match_rounds)
+match_rounds = football.get_from_dict_by_key(data_matches, "rounds")
+list_of_matches = football.get_list_of_matches(match_rounds)
 
-timovi_i_nihovi_rezultati = get_points_of_one_team(list_of_matches, prepare_teams_dict)
-tabela = pravljenje_tabele(timovi_i_nihovi_rezultati)
+timovi_i_nihovi_rezultati = football.get_points_of_one_team(list_of_matches, prepare_teams_dict)
+tabela = football.pravljenje_tabele(timovi_i_nihovi_rezultati)
 
 
 def pravljenje_dobijenih_rezultata_dict(dict_tabele):

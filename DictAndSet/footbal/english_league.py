@@ -14,46 +14,6 @@ english_matches = "english_matches.json"
 #     print(teams)
 
 
-def get_data(file):
-    with open(file, "r", encoding="utf-8") as stream:
-        data = json.load(stream)
-        return data
-
-
-def get_from_dict_by_key(dict, key):
-    return dict[key]
-
-
-def get_name_of_teams(all_clubs, key):
-    teams = []
-    for club in all_clubs:
-        teams.append(club[key])
-    return teams
-
-
-def prepare_teams_score_dict(team_names):
-    """
-    Napravio sam metodu koja treba da napravi recnik u kome ce kljuc biti ime tima, a vrednost njegovi rezultati
-    smesteni u listu
-    key = team name
-    value[0] = played matches
-    value[1] = won
-    value[2] = draw
-    value[3] = loose
-    value[4] = for goals
-    value[5] = against goals
-    value[6] = goal difference
-    value[7] = points
-    :param team_names: je parametar kojim dobijam listu svih timova koju pretvaram u recnik
-    :return: metoda vraca recnik timova i njihovih rezultata koji su na nuli
-    """
-
-    team_dict = {}
-    for key in team_names:
-        team_dict[key] = [0, 0, 0, 0, 0, 0, 0, 0]
-    return team_dict
-
-
 def get_list_of_matches(match_list):
     list_of_matches = []
     for match in match_list:
@@ -136,12 +96,12 @@ def pravljenje_tabele(dict_timova_i_njihovih_rezultata):
 
 
 data_teams = football.get_data(english_teams)
-all_clubs = get_from_dict_by_key(data_teams, "clubs")
-team_names = get_name_of_teams(all_clubs, 'name')
-prepare_teams_dict = prepare_teams_score_dict(team_names)
+all_clubs = football.get_from_dict_by_key(data_teams, "clubs")
+team_names = football.get_name_of_teams(all_clubs, 'name')
+prepare_teams_dict = football.prepare_teams_score_dict(team_names)
 
-data_matches = get_data(english_matches)
-match_rounds = get_from_dict_by_key(data_matches, "rounds")
+data_matches = football.get_data(english_matches)
+match_rounds = football.get_from_dict_by_key(data_matches, "rounds")
 list_of_matches = get_list_of_matches(match_rounds)
 
 timovi_i_nihovi_rezultati = get_points_of_one_team(list_of_matches, prepare_teams_dict)
