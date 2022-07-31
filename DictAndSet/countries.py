@@ -1,6 +1,18 @@
 input_filename = 'country_info.txt'
 dict_drzava = {}
 countries = {}
+
+class Country(object):
+    def __init__(self, country, capital, code, code3, dialing, timezone, currency):
+        self.country = country
+        self.capital = capital
+        self.code = code
+        self.code3 = code3
+        self.dialing = dialing
+        self.timezone = timezone
+        self.currency = currency
+
+
 with open(input_filename) as country_file:
     country_file.readline()
     drzava = input("Napisi neku drzavu.")
