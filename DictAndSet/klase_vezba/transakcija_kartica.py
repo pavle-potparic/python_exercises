@@ -20,6 +20,15 @@ class Player(object):
         print(10 * "-")
 
     @staticmethod
+    def sort_by_cards(players: list):
+        for index in range(0, len(players) - 1):
+            if players[index].number_of_card > players[index + 1].number_of_card:
+                temp = players[index]
+                players[index] = players[index + 1]
+                players[index + 1] = temp
+        Player.print_all_cards(players)
+
+    @staticmethod
     def transaction(player_list, cards):
         if player_list[1].number_of_card >= cards:
             player_list[0].number_of_card += cards
@@ -44,20 +53,32 @@ class Transaction:
         pass
 
 
-marko = Player('Marko', 20)
-pera = Player('Pera', 14)
-nemanja = Player('Nemanja', 16)
+class Provera:
 
-players = [marko, pera, nemanja]
+    def __init__(self, nesto):
+        self.nesto = nesto
+        self.names = []
 
-Transaction.transaction_card(pera, marko, 4)
-Player.print_all_cards(players)
-Transaction.transaction_card(pera, nemanja, 8)
-Player.print_all_cards(players)
-Transaction.transaction_card(marko, nemanja, 5)
-Player.print_all_cards(players)
-Transaction.transaction_card(pera, nemanja, 4)
-Player.print_all_cards(players)
+    def stampanje(self):
+        print('provera.')
+
+    def druga_metoda(self):
+        print("druga metoda")
+
+
+# marko = Player('Marko', 20)
+# print(marko.name)
+# pera = Player('Pera', 14)
+# nemanja = Player('Nemanja', 16)
+# players = [marko, pera, nemanja]
+# Transaction.transaction_card(pera, marko, 4)
+# Player.sort_by_cards(players)
+# Transaction.transaction_card(pera, nemanja, 8)
+# Player.sort_by_cards(players)
+# Transaction.transaction_card(marko, nemanja, 5)
+# Player.sort_by_cards(players)
+# Transaction.transaction_card(pera, nemanja, 4)
+# Player.sort_by_cards(players)
 
 # Player.transaction([pera, marko], 4)
 # Player.print_all_cards(players)
@@ -67,3 +88,14 @@ Player.print_all_cards(players)
 # Player.print_all_cards(players)
 # Player.transaction([pera, nemanja], 4)
 # Player.print_all_cards(players)
+
+# prva_provera = Provera("prvi")
+# prva_provera.names.append("Pavle")
+# prva_provera.stampanje()
+# druga_provera = Provera("drugi")
+# druga_provera.names.append("Veljko")
+# druga_provera.stampanje()
+#
+# print(prva_provera.__dict__)
+# print(druga_provera.__dict__)
+

@@ -14,7 +14,7 @@ def write_json_file(list, file):
     with open(file, 'w') as outfile:
         json.dump(list, outfile)
 
-
+name = property()
 def sort_category_by_rate_asc(categories):
     for index in range(0, len(categories) - 1):
         if categories[index]['rate'] > categories[index + 1]['rate']:
