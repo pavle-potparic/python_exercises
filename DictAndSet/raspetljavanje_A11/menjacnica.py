@@ -20,7 +20,7 @@ for x in range(0, musterije):
             eur_suma -= lista[x]
 
     else:
-        if din_suma - lista[x] < 0:
+        if din_suma - lista[x] * evro < 0:
             dinar_propusteno += 1
 
         else:
