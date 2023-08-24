@@ -122,7 +122,7 @@ def check_win():
     else:
         lose = True
         if multi == 0:
-            print("Your bank account! €", bank-(abs(betamount-betamount*multi)))
+            print("Your bank account! €", betamount)
 
 def check_if_broke():
     global broke
