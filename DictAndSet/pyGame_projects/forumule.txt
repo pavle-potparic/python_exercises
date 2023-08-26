@@ -1,0 +1,89 @@
+brzina lopte je koren iz x2 + y2
+
+kineticka enerkija = mo2 // 2 = m*(x2+y2)
+
+y1 je brzina padanja lopte
+
+y2 je brzina odbijannja lopte
+
+y2 = alfa * (-y1)
+
+TODO: V = a * t #NEZNAM ZTA JE A KOD OVE FORMULE # ovo V je brzina
+
+s = V * t # ovo je jedina formula koju znam
+
+
+TODO: ubrzanje i sila su povezani zato netreba mesati zajedno ubrzanje i brzinu
+
+V = a * t + V0
+
+s = V * t + s0
+
+F = m * a # ovo F je sila
+
+TODO: KOLISIJA
+
+a0 = 0
+V0 = 5
+x0 = 5
+
+a1 = -6
+V1 = V0 + a1 * delta t
+x1 = x0 + V1 * delta t
+
+ax0 = 0; ay0 = 0
+Vx0 = -1; Vy0 = 1
+x = 0; y0 = 100
+
+
+ax = 0; ay = 0
+Vx = 1; Vy = 1
+x = 0 + 1 * 0.2; y = 100 + 1 * 0.2
+
+delta x = 0.2
+
+
+x0 = 300
+y0 = 300
+Vx0 = 1
+Vy0 = 1
+
+
+while running:
+    if sudar_vertikalna_ivica():
+        Vx0 = -Vx0
+
+    if sudar_horizontalna_ivica():
+        Vy0 = -Vy0
+        x0 = x0 + delta t * Vx             # "Negde pre definisemo delta t: delta t = clock.tick(60)"
+        y = y + (Vy * delta t)
+
+TODO: ovde sada nastaje problem jer je x1  je premala brzina jer se fame
+    smanjuje za samo 0.02 sto je jako malo moramo da dodamo neki faktor bzine ako zelimo lopta ide brze
+
+
+TODO:  imamo platformu i pustomo loptu i ona dostigne brzinu max i ona se odbija svuda i polako se usporava
+    i ona krece polako da propada to se cesto desava na "edz kejsu" kao Super Mario kad skace pa ga
+    konstantno vuce neka gravitacija dole pa on stane na platformu i stane izgleda
+    kao da je "hard kodovano"
+    da on zavrsi tu
+
+
+TODO: ODBOJNA KOLISIJA
+
+TODO: ZADATAK IMAMO LOPTU I ONA KRECE SA CENTRA
+
+X =1OO
+V = 2O
+DT = 1
+
+#1
+
+X = X + 20 = 120
+
+#2
+
+X = X + 20 =140
+
+100 120 140 160
+
