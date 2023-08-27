@@ -37,11 +37,6 @@ d = pygame.draw.rect(screen, (89, 220, 235), (405, 335, 150, 45))
 
 end = pygame.draw.rect(screen, (89, 220, 235), (screen.get_width() / 2 - 80, screen.get_height() / 2 - 20, 160, 40))
 
-text_a1 = "A1"
-font = pygame.font.Font(None, 36)
-text_surface = font.render(text_a1, True, "black")
-text_rect = text_surface.get_rect()
-text_rect.center = (width // 2, height // 2)
 
 pygame.display.update()
 
