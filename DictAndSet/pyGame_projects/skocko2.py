@@ -53,6 +53,7 @@ for row in range(NUM_ROWS):
         krug = pygame.Rect(circle_x - SHAPE_SIZE // 2, circle_y + SHAPE_SIZE // 4, SHAPE_SIZE, SHAPE_SIZE)
         krugovi.append(krug)
 
+
 slike = [(babolat, babolat_rect), (federer, federer_rect), (nadal, nadal_rect), (novak, novak_rect),
          (zverev, zverev_rect), (skocko, skocko_rect)]
 occupied_cells = [[False for _ in range(NUM_SHAPES_PER_ROW)] for _ in range(NUM_ROWS)]
@@ -61,11 +62,12 @@ pygame.init()
 
 screen = pygame.display.set_mode((width, height))
 
+game = [[0 for i in range(4)] for a in range(7)]
+
 counter = pygame.Vector2()
 
 selected_image = None
 
-lista = []
 
 while slike:
     for event in pygame.event.get():
@@ -73,22 +75,18 @@ while slike:
             pygame.quit()
             quit()
 
+
         if event.type == pygame.MOUSEBUTTONDOWN:
             for i, rect in enumerate(slike):
-
-                if rect[1].collidepoint(event.pos) and not occupied_cells[i // NUM_SHAPES_PER_ROW][
-                    i % NUM_SHAPES_PER_ROW]:
+                if rect[1].collidepoint(event.pos) and not occupied_cells[i // NUM_SHAPES_PER_ROW][i % NUM_SHAPES_PER_ROW]:
                     occupied_cells[i // NUM_SHAPES_PER_ROW][i % NUM_SHAPES_PER_ROW] = True
                     selected_image, _ = slike[i]
+                    print(i, slike[i])
+                    game[int(counter.y)][int(counter.x)] = selected_image
                     counter.x += 1
                     if counter.x >= 4:
                         counter.y += 1
                         counter.x = 0
-
-                    (mosuse_x, mouse_y) = pygame.mouse.get_pos()
-                    if mosuse_x <= width - 110 and mosuse_x >= width - 10 and mouse_y <= height - 80 and mouse_y >= height-20:
-                        selected_image = skocko
-
                     break
 
     screen.fill((55, 95, 145))
@@ -102,13 +100,16 @@ while slike:
     for slika, rect in slike:
         screen.blit(slika, rect)
 
-    image_counter = 0
-
     if selected_image is not None:
-        kvadrat_x, kvadrat_y = kvadrati[image_counter][0], kvadrati[image_counter][1]
+        kvadrat_x, kvadrat_y = kvadrati[0].topleft
         screen.blit(selected_image, (kvadrat_x, kvadrat_y))
-        image_counter += 1
+
+    for y, row in enumerate(game):
+        for x, tile in enumerate(row):
+            if tile != 0:
+                shape_x = x * (SHAPE_SIZE + SHAPE_MARGIN)
+                shape_y = y * (SHAPE_SIZE + SHAPE_MARGIN)
+                kvadrat = pygame.Rect(shape_x, shape_y, SHAPE_SIZE, SHAPE_SIZE)
+                screen.blit(tile, kvadrat)
 
     pygame.display.update()
-
-

@@ -17,9 +17,7 @@ class ClickableSprite(pygame.sprite.Sprite):
 
 
 def on_click():
-    color = (255, 0, 0) if sprite.image.get_at(
-        (0, 0)) != (255, 0, 0) else (0, 255, 0)
-    sprite.image.fill(color)
+    print("ovo radi")
 
 
 pygame.init()

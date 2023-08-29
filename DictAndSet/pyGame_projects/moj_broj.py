@@ -21,6 +21,7 @@ big_font = pygame.font.Font(None, 48)
 def generate_numbers():
     return [random.randint(1, 10) for _ in range(4)]
 
+
 def generate_first_big_num():
     return random.randint(10, 25)
 
@@ -34,7 +35,6 @@ big1 = generate_first_big_num()
 numbers.append(big1)
 big2 = generate_second_big_num()
 numbers.append(big2)
-
 
 target_number = random.randint(100, 999)
 
@@ -94,6 +94,31 @@ while running:
         if event.type == pygame.QUIT:
             running = False
         if not attempt_used and event.type == pygame.KEYDOWN and event.key == pygame.K_RETURN:
+            counter = 0
+            for x in range(0, len(user_answer)):
+                string = ""
+                x += counter
+                if x >= len(user_answer)-1:
+                    break
+                if user_answer[x].isdigit():
+                    string += str(user_answer[x])
+                    for y in range(x + 1, len(user_answer)):
+                        if user_answer[y].isdigit():
+                            string += str(user_answer[y])
+                            counter += 1
+
+                        else:
+                            break
+
+                if string.isdigit():
+                    if int(string) in numbers:
+                        pass
+
+                    else:
+                        print("Brojevi koje ste koristili nisu ponudjeni")
+                        pygame.quit()
+                        sys.exit()
+
             user_answer = user_answer.strip()
             try:
                 user_number = eval(user_answer)
@@ -146,5 +171,3 @@ while running:
 
 pygame.quit()
 sys.exit()
-
-
