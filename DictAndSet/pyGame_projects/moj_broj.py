@@ -155,6 +155,7 @@ while running:
     x = 50
     y = 150
     for num in numbers:
+
         pygame.draw.rect(screen, number_bg_color, (x, y, square_size, square_size))
         text = font.render(str(num), True, text_color)
         text_rect = text.get_rect(center=(x + square_size / 2, y + square_size / 2))
