@@ -1,4 +1,5 @@
 import pygame
+import random
 
 pygame.init()
 width = 800
@@ -33,6 +34,14 @@ novak_rect = novak.get_rect(bottomright=(width - 310, height - 20))
 zverev_rect = zverev.get_rect(bottomright=(width - 410, height - 20))
 skocko_rect = skocko.get_rect(bottomright=(width - 510, height - 20))
 
+kombinacija = []
+
+for x in range(0, 4):
+    broj = random.randint(0, 5)
+    kombinacija.append(broj)
+
+print(kombinacija)
+
 SHAPE_SIZE = 60
 SHAPE_MARGIN = 10
 NUM_SHAPES_PER_ROW = 4
@@ -53,7 +62,6 @@ for row in range(NUM_ROWS):
         krug = pygame.Rect(circle_x - SHAPE_SIZE // 2, circle_y + SHAPE_SIZE // 4, SHAPE_SIZE, SHAPE_SIZE)
         krugovi.append(krug)
 
-
 slike = [(babolat, babolat_rect), (federer, federer_rect), (nadal, nadal_rect), (novak, novak_rect),
          (zverev, zverev_rect), (skocko, skocko_rect)]
 occupied_cells = [[False for _ in range(NUM_SHAPES_PER_ROW)] for _ in range(NUM_ROWS)]
@@ -67,21 +75,37 @@ game = [[0 for i in range(4)] for a in range(7)]
 counter = pygame.Vector2()
 
 selected_image = None
+selected_index = None
 
+running = True
 
-while slike:
+slike = slike * 7
+
+lista_index = []
+
+crvena = 0
+zuta = 0
+
+nula = 0
+
+while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
             quit()
 
-
         if event.type == pygame.MOUSEBUTTONDOWN:
             for i, rect in enumerate(slike):
-                if rect[1].collidepoint(event.pos) and not occupied_cells[i // NUM_SHAPES_PER_ROW][i % NUM_SHAPES_PER_ROW]:
+                if rect[1].collidepoint(event.pos) and not occupied_cells[(i // 7) // NUM_SHAPES_PER_ROW][
+                    (i // 7) % NUM_SHAPES_PER_ROW]:
                     occupied_cells[i // NUM_SHAPES_PER_ROW][i % NUM_SHAPES_PER_ROW] = True
                     selected_image, _ = slike[i]
-                    print(i, slike[i])
+                    selected_index = i
+                    if selected_index == 0:
+                        nula += 1
+                    print(i)
+
+                    lista_index.append(selected_index-(nula*6))
                     game[int(counter.y)][int(counter.x)] = selected_image
                     counter.x += 1
                     if counter.x >= 4:
@@ -111,5 +135,23 @@ while slike:
                 shape_y = y * (SHAPE_SIZE + SHAPE_MARGIN)
                 kvadrat = pygame.Rect(shape_x, shape_y, SHAPE_SIZE, SHAPE_SIZE)
                 screen.blit(tile, kvadrat)
+
+    if len(lista_index) == 4:
+
+        for o in range(0, 4):
+            print(lista_index)
+            if lista_index[o] == kombinacija[o]:
+                crvena += 1
+
+            else:
+                if lista_index[o] in kombinacija:
+                    zuta += 1
+
+        lista_index = []
+
+        print(crvena, zuta)
+
+        crvena = 0
+        zuta = 0
 
     pygame.display.update()

@@ -23,7 +23,7 @@ lista_ponudjenih_odgovora = [["Evropa", "Severna Amerika", "Azija", "Afrika"],
                              ["Jastreb", "Sova", "Orao", "Pelikan"],
                              ["Astronomija", "Biologija", "Geografija", "Psihologija"]]
 
-lista_odgovora = [2, 0, 1, 1, 2, 1, 1, 1, 2,0]
+lista_odgovora = [2, 0, 1, 1, 2, 1, 1, 1, 2, 0]
 
 lista_pitanja += [
     "Koji element je poznat kao 'Kraljica metala' i koristi se u izradi nakita?",
@@ -235,7 +235,6 @@ lista_odgovora += [
     1, 0, 2, 1, 1, 3, 0, 0, 1, 0
 ]
 
-
 lista_pitanja += [
     "Koja planeta je poznata kao 'Jutarnja zvezda' i 'Večernja zvezda' zbog svog sjaja u ranim jutarnjim i večernjim satima?",
     "Koji osnovni gas čini najveći deo Zemljine atmosfere?",
@@ -262,7 +261,7 @@ lista_ponudjenih_odgovora += [
     ["Kiseonik", "Azot", "Vodonik", "Helijum"]
 ]
 
-lista_odgovora.append([1, 1, 0, 3, 1, 0, 1, 2, 2, 1])
+lista_odgovora += [1, 1, 0, 3, 1, 0, 1, 2, 2, 1]
 
 lista_pitanja += [
     "Koji je najveći planet Sunčevog sistema?",
@@ -290,7 +289,7 @@ lista_ponudjenih_odgovora += [
     ["Mont Everest", "Kilimandžaro", "Anapurna", "Andi"]
 ]
 
-lista_odgovora.append([2, 3, 2, 1, 2, 1, 2, 1, 1, 0])
+lista_odgovora += [2, 3, 2, 1, 2, 1, 2, 1, 1, 0]
 
 pygame.init()
 
@@ -299,60 +298,132 @@ screen_height = 600
 screen = pygame.display.set_mode((screen_width, screen_height))
 screen.fill((55, 95, 145))
 pygame.display.set_caption("Ko zna njemu dva")
-font = pygame.font.Font(None, 36)
+font = pygame.font.Font(None, 24)
 big_font = pygame.font.Font(None, 48)
 
 running = True
 
 square_size = 630
 x = 180
-y = -250
+y = 100
 
 lista_indexa = []
 lista10 = []
 
-for x in range(0, 10):
-    broj = random.randint(0, len(lista_pitanja)-1)
+for x1 in range(0, 10):
+    broj = random.randint(0, len(lista_pitanja) - 1)
     lista_indexa.append(broj)
-    lista10.append(lista_pitanja[broj])
+    lista10.append(lista_pitanja[broj-1])
 
-pygame.time.set_timer(pygame.USEREVENT + 1, 2000)
-
+print(len(lista_odgovora))
+print(len(lista_pitanja))
+print(len(lista_ponudjenih_odgovora))
 z = 0
 while running:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-    if pygame.event.get(pygame.USEREVENT + 1):
-        z += 1
-        print("ok menjam")
-        pygame.time.set_timer(pygame.USEREVENT + 1, 2000)
 
     if z > 9:
         break
 
     screen.fill((55, 95, 145))
     text = font.render(lista10[z], True, "black")
-    text_rect = text.get_rect(center=(x + square_size / 2, y + square_size / 2))
+    text_rect = text.get_rect(center=(screen.get_width() / 2, y))
     screen.blit(text, text_rect)
 
     ponuda1 = font.render(lista_ponudjenih_odgovora[lista_indexa[z]][0], True, "black")
     ponuda1_rect = ponuda1.get_rect(center=(150, 200))
+    ponuda1_border = ponuda1.get_rect(center=(150, 200))
+    ponuda1_border.width += 50
+    ponuda1_border.height += 50
+    ponuda1_border.top -= 25
+    ponuda1_border.left -= 25
     screen.blit(ponuda1, ponuda1_rect)
+    pygame.draw.rect(screen, (255, 255, 255), ponuda1_border, 4)
+
+    if z > 9:
+        pygame.quit()
+        running = False
+        break
 
     ponuda2 = font.render(lista_ponudjenih_odgovora[lista_indexa[z]][1], True, "black")
     ponuda2_rect = ponuda2.get_rect(center=(600, 200))
+    ponuda2_border = ponuda2.get_rect(center=(600, 200))
+    ponuda2_border.width += 50
+    ponuda2_border.height += 50
+    ponuda2_border.top -= 25
+    ponuda2_border.left -= 25
     screen.blit(ponuda2, ponuda2_rect)
+    pygame.draw.rect(screen, (255, 255, 255), ponuda2_border, 4)
 
     ponuda3 = font.render(lista_ponudjenih_odgovora[lista_indexa[z]][2], True, "black")
     ponuda3_rect = ponuda3.get_rect(center=(150, 400))
+    ponuda3_border = ponuda3.get_rect(center=(150, 400))
+    ponuda3_border.width += 50
+    ponuda3_border.height += 50
+    ponuda3_border.top -= 25
+    ponuda3_border.left -= 25
     screen.blit(ponuda3, ponuda3_rect)
+    pygame.draw.rect(screen, (255, 255, 255), ponuda3_border, 4)
 
     ponuda4 = font.render(lista_ponudjenih_odgovora[lista_indexa[z]][3], True, "black")
     ponuda4_rect = ponuda4.get_rect(center=(600, 400))
+    ponuda4_border = ponuda4.get_rect(center=(600, 400))
+    ponuda4_border.width += 50
+    ponuda4_border.height += 50
+    ponuda4_border.top -= 25
+    ponuda4_border.left -= 25
     screen.blit(ponuda4, ponuda4_rect)
-        # print(lista10[z])
+    pygame.draw.rect(screen, (255, 255, 255), ponuda4_border, 4)
 
-    pygame.display.update()
+    for event in pygame.event.get():
+
+        if event.type == pygame.QUIT:
+            running = False
+
+        elif event.type == pygame.MOUSEBUTTONDOWN:
+            x1, y1 = event.pos
+            if ponuda1_rect.collidepoint(x1, y1):
+                z += 1
+                if z > 9:
+                    pygame.quit()
+                    running = False
+                    break
+
+                if lista_odgovora[lista_indexa[z]] == 0:
+                    pygame.draw.rect(screen, "green", ponuda1_border, 4)
+
+                else:
+                    print(lista_odgovora[lista_indexa[z]])
+                    print(lista_indexa[z])
+            elif ponuda2_rect.collidepoint(x1, y1):
+                z += 1
+                if z > 9:
+                    pygame.quit()
+                    running = False
+                    break
+
+                if lista_odgovora[lista_indexa[z]] == 1:
+                    pygame.draw.rect(screen, "green", ponuda2_border, 4)
+
+            elif ponuda3_rect.collidepoint(x1, y1):
+                z += 1
+                if z > 9:
+                    pygame.quit()
+                    running = False
+                    break
+
+                if lista_odgovora[lista_indexa[z]] == 2:
+                    pygame.draw.rect(screen, "green", ponuda3_border, 4)
+
+            elif ponuda4_rect.collidepoint(x1, y1):
+                z += 1
+                if z > 9:
+                    pygame.quit()
+                    running = False
+                    break
+
+                if lista_odgovora[lista_indexa[z]] == 3:
+                    pygame.draw.rect(screen, "green", ponuda4_border, 4)
+
+        pygame.display.update()
 
 pygame.quit()
