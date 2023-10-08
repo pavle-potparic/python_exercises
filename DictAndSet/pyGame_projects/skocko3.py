@@ -1,7 +1,7 @@
 import copy
+import random
 
 import pygame
-import random
 
 pygame.init()
 width = 800
@@ -156,24 +156,23 @@ while running:
 
     if len(lista_index) == 4:
         loop_counter += 1
-        index_kombinacije = 0
         for o in range(0, 4):
-            print(lista_index)
-            zuto_svetlo = 0
 
-            if lista_index[o] in kombinacija2:
+            if lista_index[0] in kombinacija2:
 
-
-                if lista_index[o] == kombinacija2[0]:
+                if lista_index[0] == kombinacija2[0]:
                     crvena += 1
                     kombinacija2.remove(kombinacija2[0])
+                    lista_index.remove(lista_index[0])
 
                 else:
                     zuta += 1
-                    kombinacija2.remove(kombinacija2.index(lista_index[o]))
 
+                    kombinacija2.remove(kombinacija2[0])
+                    lista_index.remove(lista_index[0])
             else:
                 kombinacija2.remove(kombinacija2[0])
+                lista_index.remove(lista_index[0])
 
         lista_index = []
 
@@ -182,8 +181,8 @@ while running:
         if crvena == 4:
             running = False
 
-        if end == 28:
-            print(kombinacija)
+        if loop_counter == 7:
+            running = False
 
         crvena = 0
         zuta = 0
@@ -191,3 +190,5 @@ while running:
     pygame.display.update()
 
 print(loop_counter)
+
+
