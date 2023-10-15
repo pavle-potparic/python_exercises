@@ -126,6 +126,7 @@ class Board:
                 else:
                     break
 
+
             possible_move_row = row + piece.dir
             possible_move_cols = [col - 1, col + 1]
             for possible_move_col in possible_move_cols:
@@ -138,12 +139,15 @@ class Board:
 
                         move = Move(initial, final)
 
+
                         if bool:
                             if not self.in_check(piece, move):
+
                                 piece.add_move(move)
                         else:
 
                             piece.add_move(move)
+
 
             r = 3 if piece.color == 'white' else 4
             fr = 2 if piece.color == 'white' else 5
@@ -159,12 +163,15 @@ class Board:
 
                             move = Move(initial, final)
 
+
                             if bool:
                                 if not self.in_check(piece, move):
+
                                     piece.add_move(move)
                             else:
 
                                 piece.add_move(move)
+
 
             if Square.in_range(col + 1) and row == r:
                 if self.squares[row][col + 1].has_enemy_piece(piece.color):
@@ -177,8 +184,10 @@ class Board:
 
                             move = Move(initial, final)
 
+
                             if bool:
                                 if not self.in_check(piece, move):
+
                                     piece.add_move(move)
                             else:
 
@@ -209,6 +218,7 @@ class Board:
 
                         move = Move(initial, final)
 
+
                         if bool:
                             if not self.in_check(piece, move):
 
@@ -234,10 +244,12 @@ class Board:
 
                         move = Move(initial, final)
 
+
                         if self.squares[possible_move_row][possible_move_col].isempty():
 
                             if bool:
                                 if not self.in_check(piece, move):
+
                                     piece.add_move(move)
                             else:
 
@@ -248,6 +260,7 @@ class Board:
 
                             if bool:
                                 if not self.in_check(piece, move):
+
                                     piece.add_move(move)
                             else:
 
@@ -277,6 +290,7 @@ class Board:
                 (row - 1, col - 1),
             ]
 
+
             for possible_move in adjs:
                 possible_move_row, possible_move_col = possible_move
 
@@ -298,8 +312,9 @@ class Board:
 
                             piece.add_move(move)
 
-            if not piece.moved:
 
+            if not piece.moved:
+                # queen castling
                 left_rook = self.squares[row][0].piece
                 if isinstance(left_rook, Rook):
                     if not left_rook.moved:
@@ -312,9 +327,11 @@ class Board:
 
                                 piece.left_rook = left_rook
 
+
                                 initial = Square(row, 0)
                                 final = Square(row, 3)
                                 moveR = Move(initial, final)
+
 
                                 initial = Square(row, col)
                                 final = Square(row, 2)
@@ -322,6 +339,7 @@ class Board:
 
                                 if bool:
                                     if not self.in_check(piece, moveK) and not self.in_check(left_rook, moveR):
+
                                         left_rook.add_move(moveR)
 
                                         piece.add_move(moveK)
@@ -330,6 +348,7 @@ class Board:
                                     left_rook.add_move(moveR)
 
                                     piece.add_move(moveK)
+
 
                 right_rook = self.squares[row][7].piece
                 if isinstance(right_rook, Rook):
@@ -343,6 +362,7 @@ class Board:
 
                                 piece.right_rook = right_rook
 
+
                                 initial = Square(row, 7)
                                 final = Square(row, 5)
                                 moveR = Move(initial, final)
@@ -351,8 +371,10 @@ class Board:
                                 final = Square(row, 6)
                                 moveK = Move(initial, final)
 
+
                                 if bool:
                                     if not self.in_check(piece, moveK) and not self.in_check(right_rook, moveR):
+
                                         right_rook.add_move(moveR)
 
                                         piece.add_move(moveK)
@@ -407,18 +429,24 @@ class Board:
     def _add_pieces(self, color):
         row_pawn, row_other = (6, 7) if color == 'white' else (1, 0)
 
+
         for col in range(COLS):
             self.squares[row_pawn][col] = Square(row_pawn, col, Pawn(color))
+
 
         self.squares[row_other][1] = Square(row_other, 1, Knight(color))
         self.squares[row_other][6] = Square(row_other, 6, Knight(color))
 
+
         self.squares[row_other][2] = Square(row_other, 2, Bishop(color))
         self.squares[row_other][5] = Square(row_other, 5, Bishop(color))
+
 
         self.squares[row_other][0] = Square(row_other, 0, Rook(color))
         self.squares[row_other][7] = Square(row_other, 7, Rook(color))
 
+
         self.squares[row_other][3] = Square(row_other, 3, Queen(color))
+
 
         self.squares[row_other][4] = Square(row_other, 4, King(color))
