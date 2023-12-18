@@ -1,7 +1,7 @@
 import copy
-import random
 
 import pygame
+import random
 
 pygame.init()
 width = 800
@@ -11,22 +11,22 @@ screen = pygame.display.set_mode((width, height))
 
 pygame.display.set_caption('Skocko')
 
-babolat = pygame.image.load("babolat_logo_slagalica.jpg").convert()
+babolat = pygame.image.load("teniser2.png").convert()
 babolat = pygame.transform.scale(babolat, (80, 60))
 
-federer = pygame.image.load("federer_logo_slagalica.jpg").convert()
+federer = pygame.image.load("teniser1.png").convert()
 federer = pygame.transform.scale(federer, (80, 60))
 
-nadal = pygame.image.load("nadal_logo_slagalica.png").convert()
+nadal = pygame.image.load("teniser6.png").convert()
 nadal = pygame.transform.scale(nadal, (80, 60))
 
-novak = pygame.image.load("novak_logo_slagalica.png").convert()
+novak = pygame.image.load("teniser4.png").convert()
 novak = pygame.transform.scale(novak, (80, 60))
 
-zverev = pygame.image.load("zverev_logo_slagalica.png").convert()
+zverev = pygame.image.load("teniser3.png").convert()
 zverev = pygame.transform.scale(zverev, (80, 60))
 
-skocko = pygame.image.load("skocko.jpg").convert()
+skocko = pygame.image.load("teniser5.png").convert()
 skocko = pygame.transform.scale(skocko, (80, 60))
 
 babolat_rect = babolat.get_rect(bottomright=(width - 10, height - 20))
@@ -156,23 +156,24 @@ while running:
 
     if len(lista_index) == 4:
         loop_counter += 1
+        index_kombinacije = 0
         for o in range(0, 4):
+            print(lista_index)
+            zuto_svetlo = 0
 
-            if lista_index[0] in kombinacija2:
+            if lista_index[o] in kombinacija2:
 
-                if lista_index[0] == kombinacija2[0]:
+
+                if lista_index[o] == kombinacija2[0]:
                     crvena += 1
                     kombinacija2.remove(kombinacija2[0])
-                    lista_index.remove(lista_index[0])
 
                 else:
                     zuta += 1
+                    kombinacija2.remove(kombinacija2.index(lista_index[o]))
 
-                    kombinacija2.remove(kombinacija2[0])
-                    lista_index.remove(lista_index[0])
             else:
                 kombinacija2.remove(kombinacija2[0])
-                lista_index.remove(lista_index[0])
 
         lista_index = []
 
@@ -181,8 +182,8 @@ while running:
         if crvena == 4:
             running = False
 
-        if loop_counter == 7:
-            running = False
+        if end == 28:
+            print(kombinacija)
 
         crvena = 0
         zuta = 0
@@ -190,5 +191,3 @@ while running:
     pygame.display.update()
 
 print(loop_counter)
-
-

@@ -10,7 +10,7 @@ pygame.display.set_caption("Srećan rođendan!")
 font = pygame.font.Font(None, 36)
 text = ""
 current_letter = 0
-message = "SREĆAN ROĐENDAN TATA VOLIM TE!"
+message = "Debeli Zole Debeli Zole Debeli Zole Debeli Zole Debeli Zole Debeli Zole Debeli Zole Debeli Zole "
 
 
 delay = 0.5

@@ -8,22 +8,22 @@ screen = pygame.display.set_mode((width, height))
 
 pygame.display.set_caption('Slike i Oblici')
 
-babolat = pygame.image.load("babolat_logo_slagalica.jpg").convert()
+babolat = pygame.image.load("teniser2.png").convert()
 babolat = pygame.transform.scale(babolat, (80, 60))
 
-federer = pygame.image.load("federer_logo_slagalica.jpg").convert()
+federer = pygame.image.load("teniser1.png").convert()
 federer = pygame.transform.scale(federer, (80, 60))
 
-nadal = pygame.image.load("nadal_logo_slagalica.png").convert()
+nadal = pygame.image.load("teniser6.png").convert()
 nadal = pygame.transform.scale(nadal, (80, 60))
 
-novak = pygame.image.load("novak_logo_slagalica.png").convert()
+novak = pygame.image.load("teniser4.png").convert()
 novak = pygame.transform.scale(novak, (80, 60))
 
-zverev = pygame.image.load("zverev_logo_slagalica.png").convert()
+zverev = pygame.image.load("teniser3.png").convert()
 zverev = pygame.transform.scale(zverev, (80, 60))
 
-skocko = pygame.image.load("skocko.jpg").convert()
+skocko = pygame.image.load("teniser5.png").convert()
 skocko = pygame.transform.scale(skocko, (80, 60))
 
 babolat_rect = babolat.get_rect(bottomright=(width - 10, height - 20))

@@ -18,7 +18,7 @@ poeni = 0
 ptica_x = 50
 ptica_y = VISINA // 2
 brzina_ptice = 0
-ubrzanje_ptice = 0.7
+ubrzanje_ptice = 0.9
 skok_ptice = -10
 radijus_ptice = 20
 
