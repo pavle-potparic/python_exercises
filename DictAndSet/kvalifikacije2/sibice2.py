@@ -17,6 +17,7 @@ def izvuci_upotrebljene_sibice(stranica_kvadrata, sibice):
             start += 1
         if sum == stranica_kvadrata:
             del sibice[start:end+1]
+            print(sibice)
             return True
     return False
 
