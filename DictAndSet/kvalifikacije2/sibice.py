@@ -1,48 +1,47 @@
-broj_sibica = int(input())
-
+broj = int(input())
 niz = list(map(int, input().split(" ")))
+stranica = sum(niz) / 4
 
-suma = sum(niz)
 
+def pronadji_stranicu(lista, cetvrtina_obima):
+    temp_stranica = cetvrtina_obima
+    maximum = max(lista)
 
-def spajanje_sibica(lista, stranice, velicina_stranice):
-    lista.sort(reverse=True)
-    for x in range(0, len(lista)):
-        if velicina_stranice - lista[0] in lista:
-            lista.remove(velicina_stranice - lista[0])
-            lista.remove(lista[0])
-            stranice -= 1
+    if maximum == cetvrtina_obima:
+        lista.remove(maximum)
+        return True
+
+    else:
+        if cetvrtina_obima - maximum in lista:
+            lista.remove(maximum)
+            lista.remove(cetvrtina_obima - maximum)
+            return True
+
         else:
-            razlika = velicina_stranice - lista[0]
-            lista.append(razlika)
-            lista.sort(reverse=True)
-            index = lista.index(razlika)
-            lista.remove(razlika)
-            for y in range(index, -1, -1):
-                if razlika - lista[y] in lista:
-                    stranice -= 1
-                    lista.remove(x)
-                    lista.remove(y)
-                    lista.remove(y-1)
+            while temp_stranica > 1:
+                minimum = min(lista)
+                temp_stranica -= minimum
+                lista.remove(minimum)
 
-        if stranice == 0:
-            return 1
+            if temp_stranica == 0:
+                return True
 
-    return 0
+        return False
 
 
-if suma % 4 != 0:
-    print(0)
+if sum(niz) % 4 == 0:
+    resenje = 0
+    for x in range(0, 4):
+        pokretanje = pronadji_stranicu(niz, stranica)
+        if not pokretanje:
+            print(0)
+            break
 
-elif max(niz) > suma / 4:
-    print(0)
+        else:
+            resenje += 1
+
+    if resenje == 4:
+        print(1)
 
 else:
-    stranica = suma // 4
-    broj_stranica = 4
-    if stranica in niz:
-        while stranica in niz:
-            niz.remove(stranica)
-            broj_stranica -= 1
-
-    print(spajanje_sibica(niz, broj_stranica, stranica))
+    print(0)
