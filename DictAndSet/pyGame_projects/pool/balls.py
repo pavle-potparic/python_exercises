@@ -94,7 +94,7 @@ class Balls:
         def collideWith(self, other):
 
 
-            n = other.pos - self.pos
+            n = other.index - self.pos
 
             dist = np.linalg.norm(n)
 
@@ -161,7 +161,7 @@ class Balls:
                 moveVector = moveDist * un
 
                 self.pos += -moveVector
-                other.pos += moveVector
+                other.index += moveVector
 
         def mirror(self, mirrorVector, moveBy):
 
@@ -216,13 +216,13 @@ class Balls:
         for ball in self.balls:
             if np.linalg.norm(ball.vel) > 0:
                 intersecting = False
-                if ball.pos[0] <= ball.RADIUS + horSpacing:
+                if ball.index[0] <= ball.RADIUS + horSpacing:
                     intersecting = True
-                elif ball.pos[0] > self.width - ball.RADIUS - horSpacing:
+                elif ball.index[0] > self.width - ball.RADIUS - horSpacing:
                     intersecting = True
-                if ball.pos[1] <= ball.RADIUS + verSpacing:
+                if ball.index[1] <= ball.RADIUS + verSpacing:
                     intersecting = True
-                elif ball.pos[1] > self.height - ball.RADIUS - verSpacing:
+                elif ball.index[1] > self.height - ball.RADIUS - verSpacing:
                     intersecting = True
 
                 if intersecting:

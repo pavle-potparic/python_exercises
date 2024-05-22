@@ -36,7 +36,7 @@ class Main:
             for event in pygame.event.get():
 
                 if event.type == pygame.MOUSEBUTTONDOWN:
-                    dragger.update_mouse(event.pos)
+                    dragger.update_mouse(event.index)
 
                     clicked_row = dragger.mouseY // SQSIZE
                     clicked_col = dragger.mouseX // SQSIZE
@@ -45,7 +45,7 @@ class Main:
                         piece = board.squares[clicked_row][clicked_col].piece
                         if piece.color == game.next_player:
                             board.calc_moves(piece, clicked_row, clicked_col, bool=True)
-                            dragger.save_initial(event.pos)
+                            dragger.save_initial(event.index)
                             dragger.drag_piece(piece)
                             game.show_bg(screen)
                             game.show_last_move(screen)
@@ -53,13 +53,13 @@ class Main:
                             game.show_pieces(screen)
 
                 elif event.type == pygame.MOUSEMOTION:
-                    motion_row = event.pos[1] // SQSIZE
-                    motion_col = event.pos[0] // SQSIZE
+                    motion_row = event.index[1] // SQSIZE
+                    motion_col = event.index[0] // SQSIZE
 
                     game.set_hover(motion_row, motion_col)
 
                     if dragger.dragging:
-                        dragger.update_mouse(event.pos)
+                        dragger.update_mouse(event.index)
 
                         game.show_bg(screen)
                         game.show_last_move(screen)
@@ -71,7 +71,7 @@ class Main:
                 elif event.type == pygame.MOUSEBUTTONUP:
 
                     if dragger.dragging:
-                        dragger.update_mouse(event.pos)
+                        dragger.update_mouse(event.index)
 
                         released_row = dragger.mouseY // SQSIZE
                         released_col = dragger.mouseX // SQSIZE

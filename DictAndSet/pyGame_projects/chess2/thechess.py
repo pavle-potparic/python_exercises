@@ -33,24 +33,24 @@ class chess:
 
     def occupied_pos(color: int, _except=None, __except=None):
         if color == -1:
-            return [tuple(i.pos) for i in chess.white if ((i.number != _except) and (i.captured == False))]
+            return [tuple(i.index) for i in chess.white if ((i.number != _except) and (i.captured == False))]
 
         elif color == +1:
-            return [tuple(i.pos) for i in chess.black if ((i.number != _except) and (i.captured == False))]
+            return [tuple(i.index) for i in chess.black if ((i.number != _except) and (i.captured == False))]
 
         elif color == 0:
-            return ([tuple(i.pos) for i in chess.white if ((i.number != _except) and (i.number != __except) and (i.captured == False))]+[tuple(i.pos) for i in chess.black if ((i.number != _except) and (i.number != __except) and (i.captured == False))])
+            return ([tuple(i.index) for i in chess.white if ((i.number != _except) and (i.number != __except) and (i.captured == False))] + [tuple(i.index) for i in chess.black if ((i.number != _except) and (i.number != __except) and (i.captured == False))])
 
 
     def total_legal_moves(colour):
         moves = set()
         if colour == 1:
             for i in chess.black:
-                for position in i.legal_moves(False, tuple(i.pos)):
+                for position in i.legal_moves(False, tuple(i.index)):
                     moves.add(position)
         if colour == -1:
             for i in chess.white:
-                for position in i.legal_moves(False, tuple(i.pos)):
+                for position in i.legal_moves(False, tuple(i.index)):
                     moves.add(position)
         return moves
 
@@ -77,7 +77,7 @@ class chess:
         if self.color == -1:
             for i in chess.black:
                 if i.captured == False:
-                    if i.pos == position:
+                    if i.index == position:
                         if type == True:
                             i.capture = False
                         else:
@@ -86,7 +86,7 @@ class chess:
         if self.color == 1:
             for i in chess.white:
                 if i.captured == False:
-                    if i.pos == position:
+                    if i.index == position:
                         if type == True:
                             i.capture = False
                         else:
@@ -99,7 +99,7 @@ class chess:
                 if i.piece == 0 and i.captured == False:
                     for elem in chess.black:
                         if i.captured == False and elem.capture == False and elem.captured == False:
-                            if i.pos in elem.legal_moves(False, (), True):
+                            if i.index in elem.legal_moves(False, (), True):
                                 return True
                     return False
         if colour == 1:
@@ -107,7 +107,7 @@ class chess:
                 if i.piece == 0 and i.captured == False:
                     for elem in chess.white:
                         if elem.captured == False and elem.capture == False and elem.captured == False:
-                            if i.pos in elem.legal_moves(False, (), True):
+                            if i.index in elem.legal_moves(False, (), True):
                                 return True
                     return False
 
@@ -138,10 +138,10 @@ class chess:
 
     def obj_from_pos(position):
         for i in chess.white:
-            if i.pos == position:
+            if i.index == position:
                 return i
         for i in chess.black:
-            if i.pos == position:
+            if i.index == position:
                 return i
 
 
@@ -183,8 +183,8 @@ class chess:
                     if self.moves == 0:
                         for rook in chess.available_pieces(self.color, 2):
                             if rook.moves == 0:
-                                if (self.pos[0]-rook.pos[0]) > 0:
-                                    for x in range(self.pos[0], rook.pos[0]-1, -1):
+                                if (self.pos[0]-rook.index[0]) > 0:
+                                    for x in range(self.pos[0], rook.index[0] - 1, -1):
                                         if (x, self.pos[1]) in chess.attacked_pos(-self.color):
                                             break
                                         if (x, self.pos[1]) in chess.occupied_pos(0, self.number, rook.number):
@@ -196,7 +196,7 @@ class chess:
                                             [(self.pos[0]-2, self.pos[1]), rook.number, (self.pos[0]-1, self.pos[1])])
                                     continue
                                 else:
-                                    for x in range(self.pos[0], rook.pos[0]+1):
+                                    for x in range(self.pos[0], rook.index[0] + 1):
                                         if (x, self.pos[1]) in chess.attacked_pos(-self.color):
                                             break
                                         if (x, self.pos[1]) in chess.occupied_pos(0, self.number, rook.number):
@@ -956,7 +956,7 @@ class chess:
                             if otherPiece.piece == 5 and otherPiece.color == -self.color:
                                 if (self.pos[0]+1, self.pos[1]+int((4-self.init_pos[1])/(abs(4-self.init_pos[1])))) not in chess.occupied_pos(0, self.number):
                                     if otherPiece.captures == 0 and self.captures == 0 and otherPiece.moves == 1 and self.moves == 2:
-                                        if chess.Moves[-1] == [otherPiece.number, otherPiece.init_pos, otherPiece.pos]:
+                                        if chess.Moves[-1] == [otherPiece.number, otherPiece.init_pos, otherPiece.index]:
                                             self.check_pos = self.pos
                                             self.pos = (
                                                 self.pos[0]+1, self.pos[1]+int((4-self.init_pos[1])/(abs(4-self.init_pos[1]))))
@@ -974,7 +974,7 @@ class chess:
                             if otherPiece.piece == 5 and otherPiece.color == -self.color:
                                 if (self.pos[0]-1, self.pos[1]+int((4-self.init_pos[1])/(abs(4-self.init_pos[1])))) not in chess.occupied_pos(0, self.number):
                                     if otherPiece.captures == 0 and self.captures == 0 and otherPiece.moves == 1 and self.moves == 2:
-                                        if chess.Moves[-1] == [otherPiece.number, otherPiece.init_pos, otherPiece.pos]:
+                                        if chess.Moves[-1] == [otherPiece.number, otherPiece.init_pos, otherPiece.index]:
                                             self.check_pos = self.pos
                                             self.pos = (
                                                 self.pos[0]-1, self.pos[1]+int((4-self.init_pos[1])/(abs(4-self.init_pos[1]))))

@@ -39,7 +39,7 @@ class Pole:
 
         if self.aiming and self.aimLen > self.MIN_AIM_LEN:
             gameBall = self.balls.getGameBall()
-            self.ballPos = gameBall.pos
+            self.ballPos = gameBall.index
 
             startRadius = self.aimLen + self.balls.RADIUS
             endRadius = startRadius + self.POLE_LENGTH

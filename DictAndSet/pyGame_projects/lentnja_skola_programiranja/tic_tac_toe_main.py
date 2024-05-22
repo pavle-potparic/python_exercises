@@ -214,8 +214,8 @@ def main():
             if event.type == pygame.QUIT:
                 game = False
             if event.type == MOUSEBUTTONUP:
-                coords = getSpotClicked(event.pos[0], event.pos[1])
-                if not coords and NEW_RECT.collidepoint(event.pos):
+                coords = getSpotClicked(event.index[0], event.index[1])
+                if not coords and NEW_RECT.collidepoint(event.index):
                     board = [BLANK] * 9
                     game_over = False
                     msg = "Unbeatable Tic Tac Toe AI"
@@ -225,7 +225,7 @@ def main():
                     NEW_SURF, NEW_RECT = makeText('vs AI', (52, 164, 235), TILECOLOR, WINDOWWIDTH - 120, WINDOWHEIGHT - 60)
                     NEW_SURF2, NEW_RECT2 = makeText('vs Human', TEXTCOLOR, TILECOLOR, WINDOWWIDTH - 240, WINDOWHEIGHT - 60)
 
-                if not coords and NEW_RECT2.collidepoint(event.pos):
+                if not coords and NEW_RECT2.collidepoint(event.index):
                     board = [BLANK] * 9
                     game_over = False
                     msg = "Unbeatable Tic Tac Toe AI"

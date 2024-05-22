@@ -125,20 +125,20 @@ def runGame():
                 if gameIsOver:
                     return # after games ends, click to start a new game
 
-                if event.pos == (lastMouseDownX, lastMouseDownY):
+                if event.index == (lastMouseDownX, lastMouseDownY):
                     # This event is a mouse click, not the end of a mouse drag.
-                    clickedSpace = checkForClick(event.pos)
+                    clickedSpace = checkForClick(event.index)
                 else:
                     # this is the end of a mouse drag
                     firstSelected = checkForClick((lastMouseDownX, lastMouseDownY))
-                    clickedSpace = checkForClick(event.pos)
+                    clickedSpace = checkForClick(event.index)
                     if not firstSelected or not clickedSpace:
                         # if not part of a valid drag, deselect both
                         firstSelected = None
                         clickedSpace = None
             elif event.type == MOUSEBUTTONDOWN:
                 # this is the start of a mouse click or mouse drag
-                lastMouseDownX, lastMouseDownY = event.pos
+                lastMouseDownX, lastMouseDownY = event.index
 
         if clickedSpace and not firstSelected:
             # This was the first TEACHER clicked on.
