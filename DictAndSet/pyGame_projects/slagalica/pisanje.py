@@ -12,7 +12,7 @@ class ClickableSprite(pygame.sprite.Sprite):
     def update(self, events):
         for event in events:
             if event.type == pygame.MOUSEBUTTONUP:
-                if self.rect.collidepoint(event.pos):
+                if self.rect.collidepoint(event.index):
                     self.callback()
 
 

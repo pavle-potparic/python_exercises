@@ -102,7 +102,7 @@ while running:
 
         if event.type == pygame.MOUSEBUTTONDOWN:
             for i, rect in enumerate(slike):
-                if rect[1].collidepoint(event.pos) and not occupied_cells[(i // 7) // NUM_SHAPES_PER_ROW][
+                if rect[1].collidepoint(event.index) and not occupied_cells[(i // 7) // NUM_SHAPES_PER_ROW][
                     (i // 7) % NUM_SHAPES_PER_ROW]:
                     occupied_cells[i // NUM_SHAPES_PER_ROW][i % NUM_SHAPES_PER_ROW] = True
                     selected_image, _ = slike[i]

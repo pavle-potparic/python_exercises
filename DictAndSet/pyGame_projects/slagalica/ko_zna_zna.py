@@ -142,7 +142,7 @@ while running:
             running = False
 
         elif event.type == pygame.MOUSEBUTTONDOWN:
-            x1, y1 = event.pos
+            x1, y1 = event.index
             if ponuda1_rect.collidepoint(x1, y1):
                 z += 1
                 if z > 9:

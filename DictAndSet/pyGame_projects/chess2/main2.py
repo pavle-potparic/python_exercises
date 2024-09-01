@@ -226,7 +226,7 @@ def lastmove():
         Lastmove.set_alpha(150)
         Lastmove.fill((212, 203, 69))
         screen.blit(
-            Lastmove, (distx + elem.pos[0]*blocksize, disty + elem.pos[1]*blocksize))
+            Lastmove, (distx + elem.index[0] * blocksize, disty + elem.index[1] * blocksize))
     if chess.check(-1) == True:
         for i in PIECES:
             if i.color == -1 and i.captured == False:
@@ -424,7 +424,7 @@ while running == True:
                         for elem in PIECES[elemClickIndex].castling:
                             if tuple(PIECES[elemClickIndex].pos) == elem[0]:
                                 rook = chess.obj_from_num(elem[1])
-                                rook.pos = elem[2]
+                                rook.index = elem[2]
                                 rook.temp_pos = elem[2]
                                 if checked == False:
                                     audio["castle"].play()
