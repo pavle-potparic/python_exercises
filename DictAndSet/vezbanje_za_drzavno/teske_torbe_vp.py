@@ -19,7 +19,7 @@ def manji_mrav(lista, mrav_a):
 
 
 def uzmi_torbe(lista, putnik):
-
+    pass
 
 
 print(manji_mrav(lista, mrav_a))
