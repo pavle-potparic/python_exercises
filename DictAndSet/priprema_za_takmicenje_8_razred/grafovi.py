@@ -1,5 +1,4 @@
 unos = input()
-
 cvorovi, broj_skupova = list(map(int, unos.split(" ")))
 
 skupovi = []
@@ -53,6 +52,8 @@ for x in range(0, broj_skupova):
 
     for i in brojevi:
         graf[i].update(num for num in brojevi if num != i)
+
+    print(x)
 
 
 resenje = 0
