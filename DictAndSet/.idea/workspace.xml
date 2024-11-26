@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d989a4bf-bfba-4382-9332-2376eac32d84" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/cudna_osmosmerka.py" beforeDir="false" afterPath="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/cudna_osmosmerka.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/astronom.py" beforeDir="false" afterPath="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/astronom.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +19,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="module-info" />
         <option value="Python Script" />
       </list>
     </option>
@@ -45,6 +46,7 @@
   "keyToString": {
     "Python.astronom.executor": "Debug",
     "Python.broj_jakih_lozinki.executor": "Run",
+    "Python.broj_suglasnika.executor": "Run",
     "Python.cudna_osmosmerka.executor": "Run",
     "Python.hlebovi.executor": "Run",
     "Python.najbolje_promena_c.executor": "Run",
@@ -52,6 +54,7 @@
     "Python.pin_aplikacije_od_pina_telefona.executor": "Run",
     "Python.pogadjanje_nepoznatog_broja.executor": "Run",
     "Python.presek_intervala.executor": "Run",
+    "Python.programski_jezici.executor": "Run",
     "Python.tetris_kretanje.executor": "Run",
     "Python.zbir_prostih.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -65,8 +68,8 @@
     "settings.editor.selected.configurable": "preferences.general"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.najduzi_podniz">
-    <configuration name="broj_jakih_lozinki" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.programski_jezici">
+    <configuration name="astronom" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DictAndSet" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -79,7 +82,29 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/broj_jakih_lozinki.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/astronom.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="broj_suglasnika" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DictAndSet" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/priprema_za_takmicenje_8_razred" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/broj_suglasnika.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -132,7 +157,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pin_aplikacije_od_pina_telefona" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="programski_jezici" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DictAndSet" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -145,29 +170,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/pin_aplikacije_od_pina_telefona.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="presek_intervala" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DictAndSet" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/priprema_za_takmicenje_8_razred" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/presek_intervala.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/programski_jezici.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -178,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.programski_jezici" />
+        <item itemvalue="Python.broj_suglasnika" />
+        <item itemvalue="Python.astronom" />
         <item itemvalue="Python.najduzi_podniz" />
         <item itemvalue="Python.cudna_osmosmerka" />
-        <item itemvalue="Python.broj_jakih_lozinki" />
-        <item itemvalue="Python.presek_intervala" />
-        <item itemvalue="Python.pin_aplikacije_od_pina_telefona" />
       </list>
     </recent_temporary>
   </component>
@@ -245,26 +248,6 @@
           <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/hlebovi.py</url>
           <line>15</line>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/astronom.py</url>
-          <line>6</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/astronom.py</url>
-          <line>5</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/astronom.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/astronom.py</url>
-          <line>10</line>
-          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/pin_aplikacije_od_pina_telefona.py</url>
@@ -475,6 +458,41 @@
           <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/najduzi_podniz.py</url>
           <line>13</line>
           <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/astronom.py</url>
+          <line>7</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/astronom.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/astronom.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/astronom.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/astronom.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/astronom.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/astronom.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="78" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

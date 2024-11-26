@@ -1,16 +1,18 @@
 broj = int(input())
+niz = list(map(int, input().split()))
 
-lista = list(map(int, input().split(' ')))
-resenje = 0
+broj_intervala = 0
+suma = 0
+dictionary = {0: 1}
 
-for x in range(-1, broj):
-    temp = 0
-    for y in range(x+1, broj):
-        temp += lista[y]
+for promena in niz:
+    suma += promena
+    if suma in dictionary:
+        broj_intervala += dictionary[suma]
+        dictionary[suma] += 1
+    else:
+        dictionary[suma] = 1
 
-        if temp == 0:
-            resenje += 1
-            break
+print(broj_intervala)
 
-print(resenje)
 
