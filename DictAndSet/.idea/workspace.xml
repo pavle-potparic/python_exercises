@@ -41,33 +41,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.astronom.executor": "Debug",
-    "Python.broj_jakih_lozinki.executor": "Run",
-    "Python.broj_suglasnika.executor": "Run",
-    "Python.cudna_osmosmerka.executor": "Run",
-    "Python.hlebovi.executor": "Run",
-    "Python.najbolje_promena_c.executor": "Run",
-    "Python.najduzi_podniz.executor": "Run",
-    "Python.pin_aplikacije_od_pina_telefona.executor": "Run",
-    "Python.pogadjanje_nepoznatog_broja.executor": "Run",
-    "Python.presek_intervala.executor": "Run",
-    "Python.programski_jezici.executor": "Run",
-    "Python.tetris_kretanje.executor": "Run",
-    "Python.zbir_prostih.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/GitProjects/python_exercises/DictAndSet",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.general"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.astronom.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.broj_jakih_lozinki.executor&quot;: &quot;Run&quot;,
+    &quot;Python.broj_suglasnika.executor&quot;: &quot;Run&quot;,
+    &quot;Python.cudna_osmosmerka.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hlebovi.executor&quot;: &quot;Run&quot;,
+    &quot;Python.naelektrisanje.executor&quot;: &quot;Run&quot;,
+    &quot;Python.najbolje_promena_c.executor&quot;: &quot;Run&quot;,
+    &quot;Python.najduzi_podniz.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pin_aplikacije_od_pina_telefona.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pogadjanje_nepoznatog_broja.executor&quot;: &quot;Run&quot;,
+    &quot;Python.presek_intervala.executor&quot;: &quot;Run&quot;,
+    &quot;Python.programski_jezici.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tetris_kretanje.executor&quot;: &quot;Run&quot;,
+    &quot;Python.zbir_prostih.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/GitProjects/python_exercises/DictAndSet&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Python.programski_jezici">
+}</component>
+  <component name="RunManager" selected="Python.naelektrisanje">
     <configuration name="astronom" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DictAndSet" />
       <option name="ENV_FILES" value="" />
@@ -112,7 +113,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="cudna_osmosmerka" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="naelektrisanje" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DictAndSet" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -125,7 +126,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/cudna_osmosmerka.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/naelektrisanje.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -180,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.naelektrisanje" />
         <item itemvalue="Python.programski_jezici" />
         <item itemvalue="Python.broj_suglasnika" />
         <item itemvalue="Python.astronom" />
         <item itemvalue="Python.najduzi_podniz" />
-        <item itemvalue="Python.cudna_osmosmerka" />
       </list>
     </recent_temporary>
   </component>
@@ -492,6 +493,36 @@
           <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/astronom.py</url>
           <line>13</line>
           <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/najduzi_podniz2.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/najduzi_podniz2.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/najduzi_podniz2.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/najduzi_podniz2.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/najduzi_podniz2.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/najduzi_podniz2.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="85" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
