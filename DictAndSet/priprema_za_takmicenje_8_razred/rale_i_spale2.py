@@ -19,7 +19,7 @@ for x in zecevi:
         index1 = abs(x - rupe[temp-1])
         index2 = abs(x - rupe[temp])
 
-        index = index1 if index1 < index2 else index2
+        index = index1 if index1 < index2 else index2 
 
     if index > resenje:
         resenje = int(index)

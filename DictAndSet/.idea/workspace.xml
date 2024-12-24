@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d989a4bf-bfba-4382-9332-2376eac32d84" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/rale_i_spale2.py" beforeDir="false" afterPath="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/rale_i_spale2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,35 +42,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.astronom.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.broj_jakih_lozinki.executor&quot;: &quot;Run&quot;,
-    &quot;Python.broj_suglasnika.executor&quot;: &quot;Run&quot;,
-    &quot;Python.cudna_osmosmerka.executor&quot;: &quot;Run&quot;,
-    &quot;Python.hlebovi.executor&quot;: &quot;Run&quot;,
-    &quot;Python.naelektrisanje.executor&quot;: &quot;Run&quot;,
-    &quot;Python.najbolje_promena_c.executor&quot;: &quot;Run&quot;,
-    &quot;Python.najduzi_podniz.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pin_aplikacije_od_pina_telefona.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pogadjanje_nepoznatog_broja.executor&quot;: &quot;Run&quot;,
-    &quot;Python.presek_intervala.executor&quot;: &quot;Run&quot;,
-    &quot;Python.programski_jezici.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tetris_kretanje.executor&quot;: &quot;Run&quot;,
-    &quot;Python.zbir_prostih.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/GitProjects/python_exercises/DictAndSet&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.astronom.executor": "Debug",
+    "Python.avionske_karte.executor": "Run",
+    "Python.broj_jakih_lozinki.executor": "Run",
+    "Python.broj_suglasnika.executor": "Run",
+    "Python.cudna_osmosmerka.executor": "Run",
+    "Python.hlebovi.executor": "Run",
+    "Python.naelektrisanje.executor": "Run",
+    "Python.najbolje_promena_c.executor": "Run",
+    "Python.najduzi_podniz.executor": "Run",
+    "Python.pakovanje_kutija.executor": "Run",
+    "Python.palindromski_upiti.executor": "Run",
+    "Python.pin_aplikacije_od_pina_telefona.executor": "Run",
+    "Python.pogadjanje_nepoznatog_broja.executor": "Run",
+    "Python.presek_intervala.executor": "Run",
+    "Python.programski_jezici.executor": "Run",
+    "Python.robot.executor": "Run",
+    "Python.robot2.executor": "Run",
+    "Python.skocko_broj.executor": "Run",
+    "Python.tetris_kretanje.executor": "Run",
+    "Python.uceljavanje_automobila.executor": "Run",
+    "Python.zbir_prostih.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/GitProjects/python_exercises/DictAndSet",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.general"
   }
-}</component>
-  <component name="RunManager" selected="Python.naelektrisanje">
-    <configuration name="astronom" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+}]]></component>
+  <component name="RunManager" selected="Python.robot2">
+    <configuration name="avionske_karte" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DictAndSet" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -82,7 +90,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/astronom.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/avionske_karte.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -91,7 +99,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="broj_suglasnika" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="pakovanje_kutija" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DictAndSet" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -104,7 +112,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/broj_suglasnika.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/pakovanje_kutija.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -113,7 +121,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="naelektrisanje" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="palindromski_upiti" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DictAndSet" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -126,7 +134,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/naelektrisanje.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/palindromski_upiti.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -135,7 +143,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="najduzi_podniz" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="robot2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DictAndSet" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -148,7 +156,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/najduzi_podniz.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/robot2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -157,7 +165,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="programski_jezici" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="skocko_broj" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DictAndSet" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -170,7 +178,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/programski_jezici.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/priprema_za_takmicenje_8_razred/skocko_broj.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -181,11 +189,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.naelektrisanje" />
-        <item itemvalue="Python.programski_jezici" />
-        <item itemvalue="Python.broj_suglasnika" />
-        <item itemvalue="Python.astronom" />
-        <item itemvalue="Python.najduzi_podniz" />
+        <item itemvalue="Python.robot2" />
+        <item itemvalue="Python.palindromski_upiti" />
+        <item itemvalue="Python.skocko_broj" />
+        <item itemvalue="Python.pakovanje_kutija" />
+        <item itemvalue="Python.avionske_karte" />
       </list>
     </recent_temporary>
   </component>
@@ -523,6 +531,216 @@
           <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/najduzi_podniz2.py</url>
           <line>13</line>
           <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/uceljavanje_automobila.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/uceljavanje_automobila.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/uceljavanje_automobila.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/uceljavanje_automobila.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/uceljavanje_automobila.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/uceljavanje_automobila.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/uceljavanje_automobila.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/uceljavanje_automobila.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/pakovanje_kutija.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/pakovanje_kutija.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/pakovanje_kutija.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/pakovanje_kutija.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/pakovanje_kutija.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/pakovanje_kutija.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/pakovanje_kutija.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/pakovanje_kutija.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/pakovanje_kutija.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/pakovanje_kutija.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/pakovanje_kutija.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/pakovanje_kutija.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/skocko_broj.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/skocko_broj.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/skocko_broj.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/palindromski_upiti.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="114" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/palindromski_upiti.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="115" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/palindromski_upiti.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/palindromski_upiti.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/palindromski_upiti.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/palindromski_upiti.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/palindromski_upiti.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/palindromski_upiti.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="121" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/palindromski_upiti.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/robot2.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/robot2.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="124" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/robot2.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/robot2.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="126" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/robot2.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="127" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/robot2.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="128" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/robot2.py</url>
+          <line>26</line>
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/robot2.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="130" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/robot2.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="131" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/priprema_za_takmicenje_8_razred/robot2.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="132" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
